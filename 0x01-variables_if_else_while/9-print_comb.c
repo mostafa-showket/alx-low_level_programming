@@ -15,15 +15,9 @@ int main(void)
 
 	for (i = '0'; i <= '9'; i++)
 	{
-		if (i == '9')
-		{
-			putchar(i);
-		} else
-		{
-			putchar(i);
-			putchar(comma);
-			putchar(space);
-		}
+		putchar(i);
+		putchar(comma);
+		putchar(space);
 	}
 	putchar('\n');
 	return (0);

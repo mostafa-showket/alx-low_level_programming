@@ -14,7 +14,7 @@ int main(void)
 
 	for (i = 0; i < 16; i++)
 	{
-		if (a == '9'+1)
+		if (a == '9' + 1)
 			a = 'a';
 		putchar(a);
 		a++;
