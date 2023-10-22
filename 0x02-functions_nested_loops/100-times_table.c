@@ -1,19 +1,6 @@
 #include "main.h"
 
 /**
- * print_above_9 - prints the result above 9
- * @result: integer argument to be printed
- *
- * Description: prints the result above 9
- */
-
-void print_above_9(int result)
-{
-	_putchar('0' + (result / 10));
-	_putchar('0' + (result % 10));
-}
-
-/**
  * print_times_table - prints the times table of n
  * @n: integer argument of the number to print its times table
  *
@@ -34,30 +21,25 @@ void print_times_table(int n)
 			if (j == 0)
 			{
 				_putchar('0' + result);
-			} else if (result <= 9)
+			} else
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + result);
-			} else if (result > 10 || result < 100)
-			{
-				_putchar(',');
-				_putchar(' ');
-				print_above_9(result);
-			} else if (result >= 100)
-			{
-				_putchar('0' + (result / 100));
-				print_above_9(result);
-			} else if (j == n)
-			{
-				if (result > 10 || result < 100)
+				if (result <= 9)
 				{
-					print_above_9(result);
-				} else if (result > 100)
+					_putchar(' ');
+					_putchar(' ');
+					_putchar('0' + result);
+				} else if (result > 9 && result < 100)
 				{
-					_putchar('0' + (result / 100));
-					print_above_9(result);
+					_putchar(' ');
+					_putchar('0' + (result / 10));
+					_putchar('0' + (result % 10));
+				} else if (result >= 100)
+				{
+					_putchar((result / 100) + '0');
+					_putchar(((result / 10) % 10) + '0');
+					_putchar((result % 10) + '0');
 				}
 			}
 		}
