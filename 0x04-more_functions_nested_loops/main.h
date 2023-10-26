@@ -90,10 +90,11 @@ void print_diagonal(int c);
 void print_square(int size);
 
 /**
- * pritn_triangle - prints a triangle
+ * print_triangle - prints a triangle
  * @size: integer number indicates the size of the triangle
  *
- * Return: nothing*/
+ * Return: nothing
+ */
 
 void print_triangle(int size);
 
