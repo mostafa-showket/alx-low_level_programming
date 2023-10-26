@@ -98,4 +98,10 @@ void print_square(int size);
 
 void print_triangle(int size);
 
+/**
+ * print_number - prints an integer without using long or arrays or pointers
+ */
+
+void print_number(int n);
+
 #endif
