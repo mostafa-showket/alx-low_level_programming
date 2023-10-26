@@ -19,4 +19,6 @@ void print_diagonal(int c)
 			_putchar('\\');
 			_putchar('\n');
 		}
+	else
+		_putchar('\n');
 }
