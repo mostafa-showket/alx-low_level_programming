@@ -2,24 +2,29 @@
 
 /**
  * cap_string - capitalizes all words of a string
- * @n: string to capitalized
+ * @s: string to capitalized
  *
- * Return: pointer to n
+ * Return: pointer to s
  */
 
-char *cap_string(char *n)
+char *cap_string(char *s)
 {
 	int i = 0;
 
-	while (n[i] != '\0')
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] = s[i] - 'a' + 'A';
+	i++;
+	while (s[i] != '\0')
 	{
-		if ((n[i - 1] == ' ' || n[i - 1] == '\n' || n[i - 1] == ','
-		|| n[i - 1] == ';' || n[i - 1] == '.' || n[i - 1] == '!'
-		|| n[i - 1] == '?' || n[i - 1] == '"' || n[i - 1] == '('
-		|| n[i - 1] == ')' || n[i - 1] == '{' || n[i - 1] == '}'
-		|| n[i - 1] == '\t') && (n[i] >= 97 && n[i] <= 122))
-			n[i] -= 32;
+		if ((s[i] >= 'a' && s[i] <= 'z')
+		    && (s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
+			s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' ||
+			s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' ||
+			s[i - 1] == '}' || s[i - 1] == ' ' || s[i - 1] == '\t'
+			|| s[i - 1] == '\n'))
+			s[i] = s[i] - 'a' + 'A';
 		i++;
 	}
-	return (n);
+
+	return (s);
 }
