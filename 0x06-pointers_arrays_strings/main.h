@@ -2,6 +2,15 @@
 #define main_h
 
 /**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c);
+
+/**
  * _strcat - concatenates two strings
  * @dest: string to be concatenated to
  * @src: string to be added to dest
@@ -69,5 +78,41 @@ char *cap_string(char *);
  */
 
 char *leet(char *);
+
+/**
+ * rot13 - encodes a string using rot13
+ *
+ * Return: encoded string
+ */
+
+char *rot13(char *);
+
+/**
+ * print_number - prints an integer
+ * @n: number to be printed
+ */
+
+void print_number(int n);
+
+/**
+ * infinite_add - adds two numbers
+ * @n1: number to be added
+ * @n2: number to be added
+ * @r: the buffer to store the result
+ * @size_r: the buffer size
+ *
+ * @Return: pointer to the result
+ */
+
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
+/**
+  * print_buffer - prints a buffer
+  * @b: buffer
+  * @size: buffer size
+  * Return: no return
+**/
+
+void print_buffer(char *b, int size);
 
 #endif
