@@ -63,4 +63,20 @@ char *_strpbrk(char *s, char *accept);
 
 char *_strstr(char *haystack, char *needle);
 
+/**
+ * print_chessboard - prints a chessboard
+ * @a: 2D array
+ */
+
+void print_chessboard(char (*a)[8]);
+
+/**
+ * print_diagsums - the sum of the two diagonals of a square matrix of integers
+ * @a: 2d array of chars
+ *@size: number matrix
+ *Return: void
+ */
+
+void print_diagsums(int *a, int size);
+
 #endif
